@@ -146,7 +146,7 @@ object Anagrams {
    *  all the anagrams are there. Every returned word has to exist in the dictionary.
    *
    *  Note: in case that the words of the sentence are in the dictionary, then the sentence is the anagram of itself,
-   *  so it has to be returned in this list.
+   *  so it has to be returned in this list.``
    *
    *  Note: There is only one anagram of an empty sentence.
    */
