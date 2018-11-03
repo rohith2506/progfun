@@ -10,3 +10,15 @@ def streamRange(lo: Int, hi: Int): Stream[Int] = {
 }
 
 streamRange(1, 10).take(3).toList
+
+
+def from(n: Int): Stream[Int] = n #:: from(n + 1)
+
+
+val nats = from(2)
+val m4s = nats map (_ * 4)
+
+def sieve(s: Stream[Int]): Stream[Int] =
+  s.head #:: sieve(s.tail filter (_ % s.head != 0))
+
+(sieve(nats) take 10000).toList
